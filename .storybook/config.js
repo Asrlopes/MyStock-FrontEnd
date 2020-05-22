@@ -6,12 +6,20 @@ import centered from '@storybook/addon-centered/react';
 
 import GlobalStyle from '../src/styles/global'
 
+import theme from './customTheme'
+
 const withGlobal = (Story) => (
   <>
   <Story/>
   <GlobalStyle/>
   </>
 )
+
+addParameters({
+  options:{
+    theme
+  }
+})
 
 addDecorator(withInfo);
 addDecorator(centered);
